@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class FPSInput : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float speed = 4f;
+    public float gravity = -9.8f;
+    private CharacterController _charController;
+
     void Start()
     {
-        
+        _charController = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
     void Update()
-    {
-        
+    {       
+        // Character Movement With Colisions
+        float deltaX = Input.GetAxis("Horizontal") * speed;
+        float deltaZ = Input.GetAxis("Vertical") * speed;
+        Vector3 movement = new Vector3(deltaX, 0, deltaZ);
+        movement = Vector3.ClampMagnitude(movement, speed);
+        // Gravity Force On PLayer
+        movement.y = gravity;
+        movement *= Time.deltaTime;
+        movement = transform.TransformDirection(movement);
+
+        _charController.Move(movement);
     }
 }
