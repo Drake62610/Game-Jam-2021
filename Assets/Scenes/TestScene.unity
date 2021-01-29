@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee7a1bb0b4af044cbd4d392db333858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpHeight: 5
+  jumpForce: 250
   isGrounded: 0
 --- !u!54 &471335250
 Rigidbody:
