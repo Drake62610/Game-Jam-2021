@@ -349,8 +349,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee7a1bb0b4af044cbd4d392db333858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 250
-  isGrounded: 0
+  speed: 4
+  gravity: -9.8
 --- !u!54 &471335250
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -379,6 +379,7 @@ GameObject:
   - component: {fileID: 492342682}
   - component: {fileID: 492342681}
   - component: {fileID: 492342685}
+  - component: {fileID: 492342684}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: MainCamera
@@ -451,6 +452,23 @@ Transform:
   m_Father: {fileID: 471335248}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &492342684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 492342680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea453d5ce6f2c64cb7ac742b5b1cfbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axes: 0
+  sensitivityHor: 0.5
+  sensitivityVer: 0.5
+  verMin: -45
+  verMax: 45
 --- !u!136 &492342685
 CapsuleCollider:
   m_ObjectHideFlags: 0
