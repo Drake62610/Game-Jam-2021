@@ -9,6 +9,7 @@ public class FPSInput : MonoBehaviour
 
     public bool isGrounded;
     public bool isCrouched;
+
     private bool _inputJump;
 
     private Rigidbody _rb;
@@ -32,6 +33,17 @@ public class FPSInput : MonoBehaviour
 
         if(isGrounded && _inputJump){
             _rb.AddForce(new Vector3( 0, jumpForce, 0), ForceMode.Impulse);
+        }
+
+        if(!isCrouched && Input.GetButtonDown("Crouch")){
+            isCrouched = true;
+            transform.localScale = new Vector3(1f, 0.5f, 1f);
+            transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y - 0.5f, transform.localPosition.z);
+        }
+
+        if(isCrouched & Input.GetButtonUp("Crouch")){
+            isCrouched = false;
+            transform.localScale = new Vector3(1f, 1f, 1f);
         }
     }
 
