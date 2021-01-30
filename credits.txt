@@ -1,2 +1,4 @@
 Lava Flowing Shaders - https://assetstore.unity.com/packages/vfx/shaders/lava-flowing-shader-33635
 Magic Particle Systems Lite - https://assetstore.unity.com/packages/3d/magic-particle-systems-lite-95868
+iTween - https://assetstore.unity.com/packages/tools/animation/itween-84
+Visual iTween Path Editor - http://www.pixelplacement.com/site/2010/12/03/visual-editor-for-itween-motion-paths/
