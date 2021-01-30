@@ -21,6 +21,9 @@ public class FPSInput : MonoBehaviour
     {
         // _charController = GetComponent<CharacterController>();
         _rb = GetComponent<Rigidbody>();
+
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
