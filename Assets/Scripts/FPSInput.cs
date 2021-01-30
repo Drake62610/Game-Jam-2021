@@ -69,7 +69,7 @@ public class FPSInput : MonoBehaviour
         {
             if (hit.collider.gameObject.CompareTag("Button"))
             {
-                ButtonScript button = hit.collider.gameObject.GetComponent<ButtonScript>();
+                IButton button = hit.collider.gameObject.GetComponent<IButton>();
                 button.OnPressed();
             }
         }
