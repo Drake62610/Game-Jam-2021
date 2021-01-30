@@ -8,7 +8,6 @@ public class FPSInput : MonoBehaviour
     public float speed = 4f;
     public float jumpForce = 5f;
 
-    public bool isGrounded;
     public bool isCrouched;
 
     public Camera playerCamera;
@@ -35,7 +34,7 @@ public class FPSInput : MonoBehaviour
         movement = Vector3.ClampMagnitude(movement, speed);
         transform.Translate(movement.x, 0, movement.z);
 
-        if(isGrounded && _inputJump){
+        if(IsGrounded() && _inputJump){
             _rb.AddForce(new Vector3( 0, jumpForce, 0), ForceMode.Impulse);
         }
 
@@ -56,18 +55,6 @@ public class FPSInput : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision other) {
-        if(other.gameObject.tag == "Ground"){
-            isGrounded = true;
-        }
-    }
-
-    void OnCollisionExit(Collision other) {
-        if(other.gameObject.tag == "Ground"){
-            isGrounded = false;
-        }
-    }
-
     void CheckActivateButton()
     {
         Vector3 rayOrigin = playerCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
@@ -82,5 +69,10 @@ public class FPSInput : MonoBehaviour
                 button.OnPressed();
             }
         }
+    }
+
+    public bool IsGrounded()
+    {
+        return Physics.Raycast(transform.position, -Vector3.up, 1.0f);
     }
 }
