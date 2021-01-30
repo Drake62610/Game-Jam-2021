@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scenes/ViewScene.unity.meta
+guid: 0aaf7681b481298418ec55ca33228e59
+=======
 guid: 97e7f96637af99b46a30bb65985c1ccc
+>>>>>>> 70f9f3080cea62e3c945602cf497260b93ab52f7:Assets/Scenes/TestSceneTouch.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

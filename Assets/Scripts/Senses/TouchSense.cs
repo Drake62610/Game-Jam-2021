@@ -53,13 +53,13 @@ public class TouchSense : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(fpsInput.isGrounded){
+        if(fpsInput.IsGrounded()){
             footDistance += Vector3.Distance(transform.position, oldPos);
             handDistance += Vector3.Distance(transform.position, oldPos);
             oldPos = transform.position;
         }
 
-        if(footDistance >= footprintDistanceMin && fpsInput.isGrounded){
+        if(footDistance >= footprintDistanceMin && fpsInput.IsGrounded()){
             footDistance = 0f;
             if(nextIsRight){
                 nextIsRight = false;
