@@ -23,29 +23,34 @@ public class HandScript : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other) {
-        if(isLeftHand){
-            touchSense.leftHandTouching = true;
-        } else {
-            touchSense.rightHandTouching = true;
+        if(other.tag == "Wall"){
+            if(isLeftHand){
+                touchSense.leftHandTouching = true;
+            } else {
+                touchSense.rightHandTouching = true;
+            }
         }
     }
 
     void OnTriggerStay(Collider other) {
-
-        RaycastHit hit;
-         if (Physics.Raycast(transform.position, transform.forward, out hit))
-         {
-            if(Vector3.Distance(player.transform.position, hit.point) < 2f){
-                touchSense.CreateHandPrint(hit,isLeftHand);
-            }        
-         }
+        if(other.tag == "Wall"){
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.forward, out hit))
+            {
+                if(Vector3.Distance(player.transform.position, hit.point) < 2f){
+                    touchSense.CreateHandPrint(hit,isLeftHand);
+                }        
+            }
+        }
     }
 
     void OnTriggerExit(Collider other) {
-        if(isLeftHand){
-            touchSense.leftHandTouching = false;
-        } else {
-            touchSense.rightHandTouching = false;
+        if(other.tag == "Wall"){
+            if(isLeftHand){
+                touchSense.leftHandTouching = false;
+            } else {
+                touchSense.rightHandTouching = false;
+            }
         }
     }
 }
