@@ -168,7 +168,7 @@ MonoBehaviour:
   jumpForce: 5
   isCrouched: 0
   playerCamera: {fileID: 2763095794303010481}
-  maxButtonActivationDistance: 0
+  maxButtonActivationDistance: 3
 --- !u!114 &2763095794282007160
 MonoBehaviour:
   m_ObjectHideFlags: 0

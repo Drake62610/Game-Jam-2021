@@ -11,6 +11,7 @@ public class ButtonsManager : MonoBehaviour
     public AudioSource wrongButtonsPressedAudioSource;
     public AudioSource rightButtonsPressedAudioSource;
     public AudioSource buttonPressedAudioSource;
+    public FallingFloor fallingFloorToOpen;
 
     private List<ButtonScript> _activatedButtons = new List<ButtonScript>();
 
@@ -23,6 +24,7 @@ public class ButtonsManager : MonoBehaviour
             {
                 rightButtonsPressedAudioSource.Play();
                 IsPuzzleCompleted = true;
+                fallingFloorToOpen.setIsFalling();
             }
             else
             {
