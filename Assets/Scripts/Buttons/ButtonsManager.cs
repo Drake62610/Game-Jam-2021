@@ -11,9 +11,15 @@ public class ButtonsManager : MonoBehaviour
     public AudioSource wrongButtonsPressedAudioSource;
     public AudioSource rightButtonsPressedAudioSource;
     public AudioSource buttonPressedAudioSource;
-    public FallingFloor fallingFloorToOpen;
+    public GameObject triggerableObject;
 
     private List<ButtonScript> _activatedButtons = new List<ButtonScript>();
+    private ITriggerableObject _triggerableObject;
+
+    private void Start()
+    {
+        _triggerableObject = triggerableObject.GetComponent<ITriggerableObject>();
+    }
 
     public void AddActivatedButton(ButtonScript button)
     {
@@ -24,7 +30,7 @@ public class ButtonsManager : MonoBehaviour
             {
                 rightButtonsPressedAudioSource.Play();
                 IsPuzzleCompleted = true;
-                fallingFloorToOpen.setIsFalling();
+                _triggerableObject.Trigger();
             }
             else
             {
