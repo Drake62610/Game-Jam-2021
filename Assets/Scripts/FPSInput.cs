@@ -63,8 +63,9 @@ public class FPSInput : MonoBehaviour
         Vector3 rayOrigin = playerCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
         
         RaycastHit hit;
+        int layer = 1 << LayerMask.NameToLayer("Default");
 
-        if (Physics.Raycast(rayOrigin, playerCamera.transform.forward, out hit, maxButtonActivationDistance))
+        if (Physics.Raycast(rayOrigin, playerCamera.transform.forward, out hit, maxButtonActivationDistance, layer, QueryTriggerInteraction.Ignore))
         {
             if (hit.collider.gameObject.CompareTag("Button"))
             {
