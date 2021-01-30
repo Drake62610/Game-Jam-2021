@@ -2,4 +2,5 @@ Lava Flowing Shaders - https://assetstore.unity.com/packages/vfx/shaders/lava-fl
 Magic Particle Systems Lite - https://assetstore.unity.com/packages/3d/magic-particle-systems-lite-95868
 iTween - https://assetstore.unity.com/packages/tools/animation/itween-84
 Visual iTween Path Editor - http://www.pixelplacement.com/site/2010/12/03/visual-editor-for-itween-motion-paths/
+Level Up 01 (SFX when collecting a sense) - https://freesound.org/people/rhodesmas/sounds/320655/
 Free Icons from https://www.flaticon.com/packs/
