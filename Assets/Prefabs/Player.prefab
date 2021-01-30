@@ -456,9 +456,9 @@ MonoBehaviour:
   _origin: {x: 0, y: 0, z: 0}
   _baseColor: {r: 0.2, g: 0.2, b: 0.2, a: 0}
   _waveColor: {r: 1, g: 0.2, b: 0.2, a: 0}
-  _waveAmplitude: 2
+  _waveAmplitude: 1
   _waveExponent: 22
-  _waveInterval: 1000
+  _waveInterval: 20
   _waveSpeed: 10
   _addColor: {r: 0, g: 0, b: 0, a: 1}
   shader: {fileID: 0}
