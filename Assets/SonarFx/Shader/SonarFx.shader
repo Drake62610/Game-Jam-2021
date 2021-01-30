@@ -26,7 +26,7 @@ Shader "Hidden/SonarFX"
     {
         _SonarBaseColor  ("Base Color",  Color)  = (0.1, 0.1, 0.1, 0)
         _SonarWaveColor  ("Wave Color",  Color)  = (1.0, 0.1, 0.1, 0)
-        _SonarWaveParams ("Wave Params", Vector) = (1, 20, 20, 10)
+        _SonarWaveParams ("Wave Params", Vector) = (1, 20, 20, 0)
         _SonarWaveVector ("Wave Vector", Vector) = (0, 0, 1, 0)
         _SonarAddColor   ("Add Color",   Color)  = (0, 0, 0, 0)
     }

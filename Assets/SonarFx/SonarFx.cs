@@ -20,11 +20,17 @@
 // IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Camera))]
+[RequireComponent(typeof(AudioSource))]
+
 public class SonarFx : MonoBehaviour
 {
+
+    public bool keepPlaying = true;
     // Sonar mode (directional or spherical)
     public enum SonarMode { Directional, Spherical }
     [SerializeField] SonarMode _mode = SonarMode.Directional;
@@ -55,7 +61,7 @@ public class SonarFx : MonoBehaviour
     public float waveExponent { get { return _waveExponent; } set { _waveExponent = value; } }
 
     // Interval between waves
-    [SerializeField] float _waveInterval = 20.0f;
+    [SerializeField] float _waveInterval = 1000f;
     public float waveInterval { get { return _waveInterval; } set { _waveInterval = value; } }
 
     // Wave speed
@@ -77,9 +83,10 @@ public class SonarFx : MonoBehaviour
     int addColorID;
 
     private GameObject _player;
+    private AudioSource _audioData;
 
 
-    void Start()
+    void Awake()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
         baseColorID = Shader.PropertyToID("_SonarBaseColor");
@@ -87,21 +94,25 @@ public class SonarFx : MonoBehaviour
         waveParamsID = Shader.PropertyToID("_SonarWaveParams");
         waveVectorID = Shader.PropertyToID("_SonarWaveVector");
         addColorID = Shader.PropertyToID("_SonarAddColor");
+        Shader.EnableKeyword("SONAR_SPHERICAL");
+        _audioData = GetComponent<AudioSource>();
+        InvokeRepeating("PlaySound", 0.001f, 2f);
     }
 
     void OnEnable()
     {
         GetComponent<Camera>().SetReplacementShader(shader, null);
-        Update();
     }
 
     void OnDisable()
     {
         GetComponent<Camera>().ResetReplacementShader();
+
     }
 
     void Update()
     {
+
         Shader.SetGlobalColor(baseColorID, _baseColor);
         Shader.SetGlobalColor(waveColorID, _waveColor);
         Shader.SetGlobalColor(addColorID, _addColor);
@@ -116,9 +127,23 @@ public class SonarFx : MonoBehaviour
         }
         else
         {
-            _origin = _player.transform.position;
             Shader.EnableKeyword("SONAR_SPHERICAL");
-            Shader.SetGlobalVector(waveVectorID, _origin);
+            Shader.SetGlobalVector(waveVectorID, _player.transform.position);
         }
+        // StartCoroutine(StopRay());
+
     }
+
+    void PlaySound()
+    {
+        _audioData.Play(0);
+    }
+
+    // IEnumerator StopRay()
+    // {
+    //     yield return new WaitForSeconds(2.5f);
+
+    //     var param = new Vector4(0, 0, 0, 0);
+    //     Shader.SetGlobalVector(waveParamsID, param);
+    // }
 }
