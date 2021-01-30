@@ -26,6 +26,7 @@ public class PauseMenu : MonoBehaviour
 
     void Paused()
     {
+        GUI.enabled = false;
         pauseMenuUI.SetActive(true);
         ingameHUD.SetActive(false);
         Time.timeScale = 0;
@@ -34,6 +35,7 @@ public class PauseMenu : MonoBehaviour
 
     void Resume()
     {
+        GUI.enabled = true;
         pauseMenuUI.SetActive(false);
         ingameHUD.SetActive(true);
         Time.timeScale = 1;

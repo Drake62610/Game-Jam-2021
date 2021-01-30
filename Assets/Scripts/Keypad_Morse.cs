@@ -10,9 +10,14 @@ public class Keypad_Morse : MonoBehaviour
     public bool onTrigger;
     public bool riddleSolved;
     public bool keypadScreen;
+    public GameObject keypadGameObject;
     private GameObject _player;
     [SerializeField] Camera _camera;
  
+    private float originalWidth = 1280.0f;  // define here the original resolution
+    private float originalHeight = 720.0f; // you used to create the GUI contents 
+    private Vector3 scale;
+    
     void OnTriggerEnter(Collider other)
     {
         onTrigger = true;
@@ -51,9 +56,16 @@ public class Keypad_Morse : MonoBehaviour
             Debug.Log("Solved");
         }
     }
- 
+
     void OnGUI()
     {
+        return;
+        scale.x = Screen.width/originalWidth; // calculate hor scale
+        scale.y = Screen.height/originalHeight; // calculate vert scale
+        scale.z = 1;
+        var svMat = GUI.matrix; // save current matrix
+        GUI.matrix = Matrix4x4.TRS(Vector3.zero, Quaternion.identity, scale);
+
         if(!riddleSolved)
         {
             if(onTrigger)
@@ -143,6 +155,8 @@ public class Keypad_Morse : MonoBehaviour
                     _player.GetComponent<FPSInput>().enabled = true;
 
                 }
+                
+                GUI.matrix = svMat; // restore matrix
             }
         }
     }

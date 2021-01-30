@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class ButtonScript : MonoBehaviour
+public class ButtonScript : MonoBehaviour, IButton
 {
     public Color activatedColor;
     private Color _deactivatedColor;
