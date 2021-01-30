@@ -21,7 +21,7 @@ public class SenseCollector : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Sense"))
         {
-            senseManager.onSenseCollected(other.gameObject);
+            senseManager.OnSenseCollected(other.gameObject);
             Destroy(other.gameObject);
         }
     }
