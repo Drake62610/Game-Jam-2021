@@ -14,14 +14,8 @@ public class BrailleClue : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other){
-        if(other.tag == "Player"){
+        if(other.tag == "Player" && !meshRenderer.enabled){
             meshRenderer.enabled = true;
-        }
-    }
-
-    void OnTriggerExit(Collider other){
-        if(other.tag == "Player"){
-            meshRenderer.enabled = false;
         }
     }
 }
