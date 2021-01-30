@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FallingFloor : MonoBehaviour
+public class FallingFloor : MonoBehaviour, ITriggerableObject
 {
     public float fallingSpeed = 0.01f;
     public float endY;
@@ -28,7 +28,7 @@ public class FallingFloor : MonoBehaviour
         }
     }
 
-    public void setIsFalling()
+    public void Trigger()
     {
         isFalling = true;
     }
