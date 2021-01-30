@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TouchSense : MonoBehaviour
 {
+    public float destroyTime = 10f;
+
     public float footDistance = 0f;
     public float footprintDistanceMin = 1f;
 
@@ -72,12 +74,14 @@ public class TouchSense : MonoBehaviour
     }
 
     public void CreateLeftFootPrint(){
-        Instantiate(leftPrintPrefab, leftFoot.transform.position, leftFoot.transform.rotation);
+        GameObject footprint = Instantiate(leftPrintPrefab, leftFoot.transform.position, leftFoot.transform.rotation);
+        Destroy(footprint, destroyTime);
         footDistance = 0f;
     }
 
      public void CreateRightFootPrint(){
-        Instantiate(rightPrintPrefab, rightFoot.transform.position, rightFoot.transform.rotation);
+        GameObject footprint = Instantiate(rightPrintPrefab, rightFoot.transform.position, rightFoot.transform.rotation);
+        Destroy(footprint, destroyTime);
         footDistance = 0f;
     }
 
@@ -96,6 +100,7 @@ public class TouchSense : MonoBehaviour
                 hand.transform.rotation = Quaternion.Euler(hand.transform.rotation.x, newRotation.y, hand.transform.rotation.z);
             }
             
+            Destroy(hand, destroyTime);
             handDistance = 0f;
         }
     }
