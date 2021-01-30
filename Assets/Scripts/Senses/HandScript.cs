@@ -35,7 +35,7 @@ public class HandScript : MonoBehaviour
     void OnTriggerStay(Collider other) {
         if(other.tag == "Wall"){
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.forward, out hit))
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 2f, -5, QueryTriggerInteraction.Ignore))
             {
                 if(Vector3.Distance(player.transform.position, hit.point) < 2f){
                     touchSense.CreateHandPrint(hit,isLeftHand);
