@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class FPSInput : MonoBehaviour
 {
+   
     public float speed = 4f;
     public float jumpForce = 5f;
 
     public bool isGrounded;
     public bool isCrouched;
+
+    public Camera playerCamera;
+    public float maxButtonActivationDistance;
 
     private bool _inputJump;
 
@@ -45,6 +49,11 @@ public class FPSInput : MonoBehaviour
             isCrouched = false;
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            CheckActivateButton();
+        }
     }
 
     void OnCollisionEnter(Collision other) {
@@ -56,6 +65,22 @@ public class FPSInput : MonoBehaviour
     void OnCollisionExit(Collision other) {
         if(other.gameObject.tag == "Ground"){
             isGrounded = false;
+        }
+    }
+
+    void CheckActivateButton()
+    {
+        Vector3 rayOrigin = playerCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
+        
+        RaycastHit hit;
+
+        if (Physics.Raycast(rayOrigin, playerCamera.transform.forward, out hit, maxButtonActivationDistance))
+        {
+            if (hit.collider.gameObject.CompareTag("Button"))
+            {
+                ButtonScript button = hit.collider.gameObject.GetComponent<ButtonScript>();
+                button.OnPressed();
+            }
         }
     }
 }

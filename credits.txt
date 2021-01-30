@@ -4,3 +4,7 @@ iTween - https://assetstore.unity.com/packages/tools/animation/itween-84
 Visual iTween Path Editor - http://www.pixelplacement.com/site/2010/12/03/visual-editor-for-itween-motion-paths/
 Level Up 01 (SFX when collecting a sense) - https://freesound.org/people/rhodesmas/sounds/320655/
 Free Icons from https://www.flaticon.com/packs/
+Fantasy Icons Symbols Pack - https://aeynit.itch.io/fantasy-icons-symbols-pack
+wrong (SFX when activating wrong buttons) - https://freesound.org/people/Raclure/sounds/483598/
+success_bell (SFX when activating right buttons) - https://freesound.org/people/MattLeschuck/sounds/511484/
+Switch ON Livingroom - https://freesound.org/people/MastersDisaster/sounds/218115/
