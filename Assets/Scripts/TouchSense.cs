@@ -32,7 +32,7 @@ public class TouchSense : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(fpsInput.isGrounded){
+        if(fpsInput.IsGrounded()){
             distance += Vector3.Distance(transform.position, oldPos);
             oldPos = transform.position;
         }

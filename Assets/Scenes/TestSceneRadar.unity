@@ -427,8 +427,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   jumpForce: 5
-  isGrounded: 0
   isCrouched: 0
+  playerCamera: {fileID: 0}
+  maxButtonActivationDistance: 0
 --- !u!54 &471335250
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -713,29 +714,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eceac50453e433d4c978e854d7bf958e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mode: 1
-  _direction: {x: 0, y: 0, z: 1}
-  _origin: {x: 0, y: 0, z: 0}
-  _baseColor:
-    r: 0.2
-    g: 0.2
-    b: 0.2
-    a: 0
-  _waveColor:
-    r: 1
-    g: 0.2
-    b: 0.2
-    a: 0
-  _waveAmplitude: 2
-  _waveExponent: 22
-  _waveInterval: 1000
-  _waveSpeed: 10
-  _addColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 1
-  shader: {fileID: 0}
 --- !u!82 &492342688
 AudioSource:
   m_ObjectHideFlags: 0
@@ -844,7 +822,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b99b0d7e7867959449df78171a2aef6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioData: {fileID: 0}
 --- !u!1 &581684554
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,7 +1329,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491253181}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0

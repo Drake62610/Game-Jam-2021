@@ -166,6 +166,8 @@ MonoBehaviour:
   jumpForce: 5
   isGrounded: 0
   isCrouched: 0
+  playerCamera: {fileID: 2763095794303010481}
+  maxButtonActivationDistance: 0
 --- !u!114 &2763095794282007160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +175,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2763095794282007136}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eea453d5ce6f2c64cb7ac742b5b1cfbd, type: 3}
   m_Name: 
