@@ -2425,7 +2425,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dbeee58288e15474c91fb018bc2a4fe0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bb53edb658ae3ff4fafd4a479fe7b5cf, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -4644,6 +4644,7 @@ MonoBehaviour:
   onTrigger: 0
   riddleSolved: 0
   keypadScreen: 0
+  keypadGameObject: {fileID: 0}
   _camera: {fileID: 2065057914}
 --- !u!65 &1010072048
 BoxCollider:
