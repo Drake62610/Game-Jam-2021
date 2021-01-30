@@ -332,8 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
-  maxVelocityChange: 1
-  jumpForce: 250
+  jumpForce: 5
   isGrounded: 0
   isCrouched: 0
 --- !u!54 &471335250
