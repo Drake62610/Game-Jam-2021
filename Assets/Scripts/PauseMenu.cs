@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,34 +11,31 @@ public class PauseMenu : MonoBehaviour
     public GameObject endgameUI;
     
     private GameObject _player;
+    private MouseLook _cameraMouseLookScript;
+    private MouseLook _playerMouseLookScript;
 
-    [SerializeField] Camera _camera;
+    [SerializeField] private Camera _camera;
+
     private void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        _cameraMouseLookScript = _camera.GetComponent<MouseLook>();
+        _playerMouseLookScript = _player.GetComponent<MouseLook>();
+        LockCursor();
     }
 
     void Update()
     {
-        if (GameIsPaused)
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
+            if (GameIsPaused)
                 Resume();
-            }
-        }
-        else
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
+            else
                 Paused();
-            }
         }
     }
-    
-    void Paused()
+
+    private void Paused()
     {
         //FPSInput.instance.enabled = false;
         GUI.enabled = false;
@@ -47,27 +45,24 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0;
         GameIsPaused = true;
         
-        _camera.GetComponent<MouseLook>().enabled = false;
-        _player.GetComponent<MouseLook>().enabled = false;
+        SetEnabledPlayerScripts(false);
     }
 
-    void Resume()
+    private void Resume()
     {
         GUI.enabled = true;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        LockCursor();
         pauseMenuUI.SetActive(false);
         ingameHUD.SetActive(true);
         Time.timeScale = 1;
         GameIsPaused = false;
         
-        _camera.GetComponent<MouseLook>().enabled = true;
-        _player.GetComponent<MouseLook>().enabled = true;
-
+        SetEnabledPlayerScripts(true);
     }
 
     public void LoadMainMenu()
     {
+        SetEnabledPlayerScripts(false);
         DontDestroyOnLoadScene.instance.RemoveFromDontDestroyOnLoad();
         Resume();
         UnlockCursor();
@@ -87,6 +82,12 @@ public class PauseMenu : MonoBehaviour
         Application.Quit();
     }
 
+    private void LockCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+    
     private void UnlockCursor()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -109,5 +110,11 @@ public class PauseMenu : MonoBehaviour
     {
         _player = GameObject.FindGameObjectWithTag("Player");
         _camera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+    }
+
+    private void SetEnabledPlayerScripts(bool scriptEnabled)
+    {
+        _cameraMouseLookScript.enabled = scriptEnabled;
+        _playerMouseLookScript.enabled = scriptEnabled;
     }
 }

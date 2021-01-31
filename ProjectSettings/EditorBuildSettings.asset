@@ -16,7 +16,7 @@ EditorBuildSettings:
     guid: ee930e8f1004bb049942316ec34cd38e
   - enabled: 1
     path: Assets/Scenes/HearingScene.unity
-    guid: ead2cd0913ab5da408aed02581ae3675
+    guid: d17b5df04441a4546bd9b013f24a3718
   - enabled: 1
     path: Assets/Scenes/SightScene.unity
     guid: 33a41ab055e342e4eafe89e5073acb7b

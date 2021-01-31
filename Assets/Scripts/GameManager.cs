@@ -10,15 +10,19 @@ public class GameManager : MonoBehaviour
     public Animator transitionAnim;
     public GameObject endTextObject;
 
-    private Text endText;
+    private Text _endText;
     public bool canChangeScene;
+    private static GameManager _instance;
 
     void Awake() {
-        currentLevelId = 1;
+        if (_instance == null)
+            _instance = this;
+        else if (_instance != this)
+            currentLevelId = 1;
     }
 
     void Start(){
-        endText = endTextObject.GetComponent<Text>();
+        _endText = endTextObject.GetComponent<Text>();
     }
 
     void Update(){
@@ -30,7 +34,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void NextScene(string text){
-        endText.text = text;
+        _endText.text = text;
         endTextObject.SetActive(true);
         canChangeScene = true;
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -44,12 +48,6 @@ public class GameManager : MonoBehaviour
         transitionAnim.SetTrigger("end");
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(currentLevelId);   
-    }
-
-    public void LoadMenu()
-    {
-        SceneManager.LoadScene(0);
-        currentLevelId = 0;
     }
 
     public void QuitGame()

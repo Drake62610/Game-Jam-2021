@@ -1,10 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class DontDestroyOnLoadScene : MonoBehaviour
 {
-
-    public GameObject[] objects;
+    public List<GameObject> objects;
 
     public static DontDestroyOnLoadScene instance;
 
