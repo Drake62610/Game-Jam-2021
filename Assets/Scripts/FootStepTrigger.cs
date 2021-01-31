@@ -16,21 +16,21 @@ public class FootStepTrigger : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetAxis("Vertical") < 0) IsMoving = true; 
-        else IsMoving = false;
+        // if (Input.GetAxis("Vertical") < 0) IsMoving = true; 
+        // else IsMoving = false;
 
-        if (IsMoving && !_footsteps.isPlaying) _footsteps.Play(); 
-        if (!IsMoving) _footsteps.Stop(); 
-    // void OnCollisionEnter(Collision other)
-    // {
-    //     if (other.gameObject.tag == "Player" && (Input.GetAxis("Vertical") < 0) {
-    //         if (!_footsteps.isPlaying)
-    //         {
-    //             _footsteps.Play(0);
-    //         }
-    //         else
-    //             _footsteps.Stop();
-    //     }
-    // }
+        // if (IsMoving && !_footsteps.isPlaying) _footsteps.Play(); 
+        // if (!IsMoving) _footsteps.Stop(); 
+        // void OnCollisionEnter(Collision other)
+        // {
+        //     if (other.gameObject.tag == "Player" && (Input.GetAxis("Vertical") < 0) {
+        //         if (!_footsteps.isPlaying)
+        //         {
+        //             _footsteps.Play(0);
+        //         }
+        //         else
+        //             _footsteps.Stop();
+        //     }
+        // }
     }
 }
