@@ -3,8 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-
-    public static bool gameIsPaused = false;
+    public bool GameIsPaused { get; private set; } = false;
 
     public GameObject ingameHUD;
     public GameObject pauseMenuUI;
@@ -21,12 +20,8 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        if (gameIsPaused)
+        if (GameIsPaused)
         {
-            _camera.GetComponent<MouseLook>().enabled = false;
-            _player.GetComponent<MouseLook>().enabled = false;
-
-
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 Resume();
@@ -38,11 +33,9 @@ public class PauseMenu : MonoBehaviour
             {
                 Paused();
             }
-            _camera.GetComponent<MouseLook>().enabled = true;
-            _player.GetComponent<MouseLook>().enabled = true;
-
         }
     }
+    
     void Paused()
     {
         GUI.enabled = false;
@@ -50,7 +43,10 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         ingameHUD.SetActive(false);
         Time.timeScale = 0;
-        gameIsPaused = true;
+        GameIsPaused = true;
+        
+        _camera.GetComponent<MouseLook>().enabled = false;
+        _player.GetComponent<MouseLook>().enabled = false;
     }
 
     void Resume()
@@ -61,7 +57,11 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         ingameHUD.SetActive(true);
         Time.timeScale = 1;
-        gameIsPaused = false;
+        GameIsPaused = false;
+        
+        _camera.GetComponent<MouseLook>().enabled = true;
+        _player.GetComponent<MouseLook>().enabled = true;
+
     }
 
     public void LoadMainMenu()
@@ -90,4 +90,5 @@ public class PauseMenu : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
+    
 }
