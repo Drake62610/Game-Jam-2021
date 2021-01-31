@@ -478,7 +478,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 49974026}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9864c9a27cd0324fbd5535ce2f3eabc, type: 3}
+  m_Script: {fileID: 11500000, guid: f96bef49719822443879f39c65448ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 831898337}
@@ -5437,7 +5437,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 64734023}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9864c9a27cd0324fbd5535ce2f3eabc, type: 3}
+  m_Script: {fileID: 11500000, guid: f96bef49719822443879f39c65448ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 377990914}
@@ -5685,7 +5685,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 158851917}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9864c9a27cd0324fbd5535ce2f3eabc, type: 3}
+  m_Script: {fileID: 11500000, guid: f96bef49719822443879f39c65448ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 2025593358}
@@ -7035,7 +7035,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 452067764}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9864c9a27cd0324fbd5535ce2f3eabc, type: 3}
+  m_Script: {fileID: 11500000, guid: f96bef49719822443879f39c65448ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 1782477315}
@@ -7188,7 +7188,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 468875318}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9864c9a27cd0324fbd5535ce2f3eabc, type: 3}
+  m_Script: {fileID: 11500000, guid: f96bef49719822443879f39c65448ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 604783429}
@@ -23614,10 +23614,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 843440930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a2575e759f734b99a3e4995f95408, type: 3}
+  m_Script: {fileID: 11500000, guid: 881c76c67218bd5449c6eb676574007a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smellPaths:
+  smellsPaths:
   - {fileID: 1367484192}
   - {fileID: 2123631080}
   - {fileID: 1610985870}
@@ -34525,7 +34525,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1081465915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9864c9a27cd0324fbd5535ce2f3eabc, type: 3}
+  m_Script: {fileID: 11500000, guid: f96bef49719822443879f39c65448ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 389901152}
@@ -45214,7 +45214,7 @@ MonoBehaviour:
   - {x: 5, y: 1, z: 46}
   - {x: 5, y: 1, z: 24}
   - {x: 15, y: 1, z: 23}
-  - {x: 4, y: 1, z: 6}
+  - {x: 5.138572, y: 1, z: 6}
   - {x: 32, y: 1, z: 4}
   - {x: 36, y: 1, z: 12}
   - {x: 26, y: 1, z: 18}
@@ -46039,9 +46039,9 @@ MonoBehaviour:
   buttonsToActivate:
   - {fileID: 1168249035}
   - {fileID: 2418550}
+  - {fileID: 1929935163}
   - {fileID: 1388805340}
   - {fileID: 1259009442}
-  - {fileID: 1929935163}
   - {fileID: 331598895}
   wrongButtonsPressedAudioSource: {fileID: 1497748308}
   rightButtonsPressedAudioSource: {fileID: 1497748309}
@@ -46088,7 +46088,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1498633551}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9864c9a27cd0324fbd5535ce2f3eabc, type: 3}
+  m_Script: {fileID: 11500000, guid: f96bef49719822443879f39c65448ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 711004807}
@@ -57436,7 +57436,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1794038139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9864c9a27cd0324fbd5535ce2f3eabc, type: 3}
+  m_Script: {fileID: 11500000, guid: f96bef49719822443879f39c65448ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 1351832562}
@@ -58229,7 +58229,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2116417678}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9864c9a27cd0324fbd5535ce2f3eabc, type: 3}
+  m_Script: {fileID: 11500000, guid: f96bef49719822443879f39c65448ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   plane: {fileID: 1116190923}
