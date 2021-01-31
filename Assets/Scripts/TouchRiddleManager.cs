@@ -10,14 +10,18 @@ public class TouchRiddleManager : MonoBehaviour
     [SerializeField] OnOFFSwitch button_2;  // 0
     [SerializeField] OnOFFSwitch button_1;  // 1
 
+    public GameObject riddleSymbol;
+    public AudioSource successSFX;
+    
     private bool isSolved;
 
     // Update is called once per frame
     void Update()
     {
-        if (button_5.isOn && button_3.isOn && button_1.isOn && !button_2.isOn && !button_4.isOn) {
+        if (button_5.IsOn && button_3.IsOn && button_1.IsOn && !button_2.IsOn && !button_4.IsOn && !isSolved) {
             isSolved = true;
-            Debug.Log("Wow solved incredible");
+            riddleSymbol.SetActive(true);
+            successSFX.Play();
         }
     }
 }
