@@ -10,6 +10,7 @@ TagManager:
   - Wall
   - Lava
   - Platforms
+  - GameManager
   layers:
   - Default
   - TransparentFX
