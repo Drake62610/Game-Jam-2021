@@ -2,29 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public int currentLevelId;
     public Animator transitionAnim;
-    public GameObject endText;
+    public GameObject endTextObject;
+
+    private Text endText;
+    public bool canChangeScene;
 
     void Awake() {
         currentLevelId = 1;
     }
 
     void Start(){
-
+        endText = endTextObject.GetComponent<Text>();
     }
 
     void Update(){
-        if(Input.GetKeyDown(KeyCode.Space)){
-            NextScene();
+        if(canChangeScene && Input.GetKeyDown(KeyCode.Space)){
+            canChangeScene = false;
+            endTextObject.SetActive(false);
+            StartCoroutine(LoadScene());
         }
     }
 
-    public void NextScene(){
-        StartCoroutine(LoadScene());
+    public void NextScene(string text){
+        endText.text = text;
+        endTextObject.SetActive(true);
+        canChangeScene = true;
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<FPSInput>().enabled = false;
+        player.GetComponent<MouseLook>().enabled = false;
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<MouseLook>().enabled = false;
     }
 
     IEnumerator LoadScene(){
