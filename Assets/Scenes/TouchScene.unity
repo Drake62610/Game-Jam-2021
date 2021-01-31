@@ -3498,7 +3498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 587b80efd03dba642af3b593fb94d105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLevelId: 1
+  currentLevelId: 2
   transitionAnim: {fileID: 1984791554}
   endTextObject: {fileID: 251165541}
   canChangeScene: 0
