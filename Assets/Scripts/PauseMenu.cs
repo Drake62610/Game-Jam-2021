@@ -15,6 +15,8 @@ public class PauseMenu : MonoBehaviour
     private void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
@@ -27,8 +29,6 @@ public class PauseMenu : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
                 Resume();
             }
         }

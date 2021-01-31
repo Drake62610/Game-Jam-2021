@@ -8,6 +8,8 @@ TagManager:
   - Sense
   - Button
   - Wall
+  - Lava
+  - Platforms
   layers:
   - Default
   - TransparentFX

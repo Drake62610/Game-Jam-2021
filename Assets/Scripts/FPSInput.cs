@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FPSInput : MonoBehaviour
 {
-   
+
     public float speed = 4f;
     public float jumpForce = 5f;
 
@@ -14,9 +14,10 @@ public class FPSInput : MonoBehaviour
     public float maxButtonActivationDistance;
 
     private bool _inputJump;
+    private bool _isGrounded;
 
     private Rigidbody _rb;
-  
+
     void Start()
     {
         // _charController = GetComponent<CharacterController>();
@@ -27,10 +28,10 @@ public class FPSInput : MonoBehaviour
     }
 
     void Update()
-    {       
+    {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
-        
+
         _inputJump = Input.GetButtonDown("Jump");
 
         Vector3 movement = new Vector3(moveHorizontal * speed * Time.deltaTime, 0, moveVertical * speed * Time.deltaTime);
@@ -41,13 +42,15 @@ public class FPSInput : MonoBehaviour
             _rb.AddForce(new Vector3( 0, jumpForce, 0), ForceMode.Impulse);
         }
 
-        if(!isCrouched && Input.GetButtonDown("Crouch")){
+        if (!isCrouched && Input.GetButtonDown("Crouch"))
+        {
             isCrouched = true;
             transform.localScale = new Vector3(1f, 0.5f, 1f);
             transform.localPosition = new Vector3(transform.localPosition.x, transform.localPosition.y - 0.5f, transform.localPosition.z);
         }
 
-        if(isCrouched & Input.GetButtonUp("Crouch")){
+        if (isCrouched & Input.GetButtonUp("Crouch"))
+        {
             isCrouched = false;
             transform.localScale = new Vector3(1f, 1f, 1f);
         }
@@ -58,10 +61,25 @@ public class FPSInput : MonoBehaviour
         }
     }
 
+    void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Platforms")
+        {
+            transform.parent = other.transform;
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Platforms")
+        {
+            transform.parent = null;
+        }
+    }
+
     void CheckActivateButton()
     {
         Vector3 rayOrigin = playerCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
-        
+
         RaycastHit hit;
         int layer = 1 << LayerMask.NameToLayer("Default");
 
@@ -75,8 +93,22 @@ public class FPSInput : MonoBehaviour
         }
     }
 
+    void OnCollisionStay(Collision other) {
+        if (other.gameObject.tag == "Ground" || other.gameObject.tag == "Platforms") {
+            _isGrounded = true;
+        }
+    }
+
+    void OnCollisionExit(Collision other) {
+        if (other.gameObject.tag == "Ground" || other.gameObject.tag == "Platforms") {
+            _isGrounded = false;
+        }
+    }
     public bool IsGrounded()
     {
-        return Physics.Raycast(transform.position, -Vector3.up, 1.0f);
+
+        return _isGrounded;
+        // Debug.Log(Physics.Raycast(transform.position, -Vector3.up, 1.0f));
+        // return Physics.Raycast(transform.position, -Vector3.up, 1.0f);
     }
 }
