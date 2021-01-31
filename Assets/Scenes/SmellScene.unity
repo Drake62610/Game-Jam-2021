@@ -23574,61 +23574,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842130462}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &843440930
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 843440931}
-  - component: {fileID: 843440932}
-  m_Layer: 0
-  m_Name: LevelManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &843440931
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843440930}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.5658, y: -11.816757, z: 56.40571}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &843440932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843440930}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 881c76c67218bd5449c6eb676574007a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  smellsPaths:
-  - {fileID: 1367484192}
-  - {fileID: 2123631080}
-  - {fileID: 1610985870}
-  - {fileID: 221910919}
-  - {fileID: 300715405}
-  - {fileID: 678823040}
-  - {fileID: 861118057}
-  - {fileID: 824190973}
-  - {fileID: 1100938473}
-  orbPath: {fileID: 1474857172}
-  senseOrb: {fileID: 1083655139}
 --- !u!1 &858662650
 GameObject:
   m_ObjectHideFlags: 0
@@ -46046,7 +45991,7 @@ MonoBehaviour:
   wrongButtonsPressedAudioSource: {fileID: 1497748308}
   rightButtonsPressedAudioSource: {fileID: 1497748309}
   buttonPressedAudioSource: {fileID: 1497748310}
-  triggerableObject: {fileID: 843440930}
+  triggerableObject: {fileID: 1957392902}
 --- !u!1 &1498633551
 GameObject:
   m_ObjectHideFlags: 0
@@ -57792,6 +57737,61 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activatedColor: {r: 1, g: 0, b: 0, a: 0}
   buttonsManager: {fileID: 1497748311}
+--- !u!1 &1957392902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1957392903}
+  - component: {fileID: 1957392904}
+  m_Layer: 0
+  m_Name: EndStage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1957392903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957392902}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 66.99046, y: -21.640076, z: 27.673668}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2076297539}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1957392904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957392902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881c76c67218bd5449c6eb676574007a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smellsPaths:
+  - {fileID: 1367484192}
+  - {fileID: 2123631080}
+  - {fileID: 1610985870}
+  - {fileID: 221910919}
+  - {fileID: 300715405}
+  - {fileID: 678823040}
+  - {fileID: 861118057}
+  - {fileID: 824190973}
+  - {fileID: 1100938473}
+  orbPath: {fileID: 1474857172}
+  senseOrb: {fileID: 1083655139}
 --- !u!1 &2025593358
 GameObject:
   m_ObjectHideFlags: 0
@@ -57979,6 +57979,7 @@ Transform:
   - {fileID: 349402349}
   - {fileID: 1787847705}
   - {fileID: 1497748307}
+  - {fileID: 1957392903}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

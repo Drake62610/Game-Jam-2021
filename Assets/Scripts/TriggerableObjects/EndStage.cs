@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelManager : MonoBehaviour, ITriggerableObject
+public class EndStage : MonoBehaviour, ITriggerableObject
 {
 
     public List<GameObject> smellsPaths;
