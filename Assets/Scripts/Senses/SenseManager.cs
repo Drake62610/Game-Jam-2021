@@ -32,6 +32,11 @@ public class SenseManager : MonoBehaviour
             SetSenseCollected(Sense.Hearing, hearingImage);
         else if (senseName.Equals("Sight Orb"))
             SetSenseCollected(Sense.Sight, sightImage);
+        else if (senseName.Equals("End Orb"))
+        {
+            collectSenseSFX.Play();
+            GetComponentInParent<PauseMenu>().TriggerEnd();
+        }
         else
             Debug.Log("Unknown/Invalid sense: " + senseName);
     }
