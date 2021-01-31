@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FallingFloor : MonoBehaviour, ITriggerableObject
 {
-    public float fallingSpeed = 0.01f;
+    public float fallingSpeed = 0.02f;
     public float endY;
     public bool isFalling = false;
     

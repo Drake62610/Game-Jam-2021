@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
 
    public GameObject ingameHUD;
    public GameObject pauseMenuUI;
+   public GameObject endgameUI;
 
     void Update()
     {
@@ -27,6 +28,7 @@ public class PauseMenu : MonoBehaviour
     void Paused()
     {
         GUI.enabled = false;
+        UnlockCursor();
         pauseMenuUI.SetActive(true);
         ingameHUD.SetActive(false);
         Time.timeScale = 0;
@@ -36,6 +38,8 @@ public class PauseMenu : MonoBehaviour
     void Resume()
     {
         GUI.enabled = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         pauseMenuUI.SetActive(false);
         ingameHUD.SetActive(true);
         Time.timeScale = 1;
@@ -46,11 +50,26 @@ public class PauseMenu : MonoBehaviour
     {
         DontDestroyOnLoadScene.instance.RemoveFromDontDestroyOnLoad();
         Resume();
+        UnlockCursor();
         SceneManager.LoadScene("Menu");
+    }
+    
+    public void TriggerEnd()
+    {
+        Time.timeScale = 0;
+        ingameHUD.SetActive(false);
+        endgameUI.SetActive(true);
+        UnlockCursor();
     }
 
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    private void UnlockCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }
