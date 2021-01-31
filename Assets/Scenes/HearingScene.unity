@@ -4785,7 +4785,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6009561437064510306, guid: ed6c226afc624a44381e91c17c882968, type: 3}
       propertyPath: m_Name
-      value: Sense Orb
+      value: Sight Orb
       objectReference: {fileID: 0}
     - target: {fileID: 6012313237939670568, guid: ed6c226afc624a44381e91c17c882968, type: 3}
       propertyPath: m_RootOrder

@@ -114,7 +114,9 @@ public class PauseMenu : MonoBehaviour
 
     private void SetEnabledPlayerScripts(bool scriptEnabled)
     {
-        _cameraMouseLookScript.enabled = scriptEnabled;
-        _playerMouseLookScript.enabled = scriptEnabled;
+        if (_cameraMouseLookScript != null)
+            _cameraMouseLookScript.enabled = scriptEnabled;
+        if (_playerMouseLookScript != null)
+            _playerMouseLookScript.enabled = scriptEnabled;
     }
 }
