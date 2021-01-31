@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/TouchScene.unity
+    guid: 186812b53d506204fa5fcfe9b38aeb31
   m_configObjects: {}
