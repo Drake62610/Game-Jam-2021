@@ -2744,7 +2744,7 @@ MonoBehaviour:
   speed: 4
   jumpForce: 5
   isCrouched: 0
-  playerCamera: {fileID: 0}
+  playerCamera: {fileID: 492342682}
   maxButtonActivationDistance: 0
 --- !u!54 &471335250
 Rigidbody:
@@ -2922,8 +2922,6 @@ GameObject:
   - component: {fileID: 492342684}
   - component: {fileID: 492342686}
   - component: {fileID: 492342688}
-  - component: {fileID: 492342687}
-  - component: {fileID: 492342689}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: MainCamera
@@ -2938,7 +2936,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492342680}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &492342682
 Camera:
   m_ObjectHideFlags: 0
@@ -3051,18 +3049,6 @@ MonoBehaviour:
   _waveSpeed: 10
   _addColor: {r: 0, g: 0, b: 0, a: 1}
   shader: {fileID: 4800000, guid: 6d12e7ab487bf49d18b89038af741a18, type: 3}
---- !u!114 &492342687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 492342680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eceac50453e433d4c978e854d7bf958e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &492342688
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3159,18 +3145,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &492342689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 492342680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b99b0d7e7867959449df78171a2aef6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &520354764
 GameObject:
   m_ObjectHideFlags: 0
@@ -3280,7 +3254,7 @@ GameObject:
   - component: {fileID: 532024602}
   m_Layer: 0
   m_Name: Cube (8)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5145,7 +5119,7 @@ GameObject:
   - component: {fileID: 1061413713}
   m_Layer: 0
   m_Name: Cube (7)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

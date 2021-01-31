@@ -5,10 +5,14 @@ using UnityEngine;
 public class SenseCollector : MonoBehaviour
 {
     public SenseManager senseManager;
+    public string endText;
+
+    private GameManager gameManager;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -23,6 +27,7 @@ public class SenseCollector : MonoBehaviour
         {
             senseManager.OnSenseCollected(other.gameObject);
             Destroy(other.gameObject);
+            gameManager.NextScene();
         }
     }
 }
