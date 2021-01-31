@@ -45560,6 +45560,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1869814799, guid: 89de9394ce98f1e499c5c1ef6a202b19, type: 3}
+      propertyPath: endText
+      value: You found the Voice Sense.
+      objectReference: {fileID: 0}
     - target: {fileID: 283128008898414863, guid: 89de9394ce98f1e499c5c1ef6a202b19, type: 3}
       propertyPath: _waveInterval
       value: 20
@@ -58037,7 +58041,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1957392902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 881c76c67218bd5449c6eb676574007a, type: 3}
+  m_Script: {fileID: 11500000, guid: 61e66dd6c684c7f4fbc812fd228fd8f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   smellsPaths:

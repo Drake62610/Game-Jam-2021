@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SenseCollector : MonoBehaviour
 {
-    public SenseManager senseManager;
+    
     public string endText;
-
-    public GameManager gameManager;
+    private SenseManager senseManager;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()

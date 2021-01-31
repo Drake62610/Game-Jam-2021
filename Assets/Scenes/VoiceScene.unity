@@ -2644,6 +2644,7 @@ GameObject:
   - component: {fileID: 471335250}
   - component: {fileID: 471335249}
   - component: {fileID: 471335251}
+  - component: {fileID: 471335244}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2651,6 +2652,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &471335244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 471335243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a59ff4dafff0440907f6d069a6559b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endText: You found the Sight Sense.
 --- !u!136 &471335245
 CapsuleCollider:
   m_ObjectHideFlags: 0
