@@ -21,6 +21,13 @@ public class SenseManager : MonoBehaviour
         Sight,
     };
 
+    private void Start()
+    {
+        // Start with touch
+        _collectedSenses.Add(Sense.Touch);
+        touchImage.color = new Color(255, 255, 255, 255);
+    }
+
     public void OnSenseCollected(GameObject sense)
     {
         String senseName = sense.name;
