@@ -3,28 +3,46 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-   
-   public static bool gameIsPaused = false;
 
-   public GameObject ingameHUD;
-   public GameObject pauseMenuUI;
-   public GameObject endgameUI;
+    public static bool gameIsPaused = false;
+
+    public GameObject ingameHUD;
+    public GameObject pauseMenuUI;
+    public GameObject endgameUI;
+    private GameObject _player;
+
+    [SerializeField] Camera _camera;
+    private void Start()
+    {
+        _player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (gameIsPaused)
         {
-            if(gameIsPaused)
+            _camera.GetComponent<MouseLook>().enabled = false;
+            _player.GetComponent<MouseLook>().enabled = false;
+
+
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
                 Resume();
             }
-            else
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
                 Paused();
             }
+            _camera.GetComponent<MouseLook>().enabled = true;
+            _player.GetComponent<MouseLook>().enabled = true;
+
         }
     }
-
     void Paused()
     {
         GUI.enabled = false;
@@ -53,7 +71,7 @@ public class PauseMenu : MonoBehaviour
         UnlockCursor();
         SceneManager.LoadScene("Menu");
     }
-    
+
     public void TriggerEnd()
     {
         Time.timeScale = 0;
