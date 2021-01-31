@@ -10,6 +10,7 @@ public class KeycodeScript : MonoBehaviour
     public Text codeTextZone;
     public AudioSource successSFX;
     public AudioSource errorSFX;
+    public GameObject riddleSymbol;
     
     private bool _riddleSolved;
     private string input;
@@ -33,6 +34,7 @@ public class KeycodeScript : MonoBehaviour
         if (input == curPassword)
         {
             _riddleSolved = true;
+            riddleSymbol.SetActive(true);
             successSFX.Play();
             DeactivateKeypad();
         }
