@@ -976,7 +976,7 @@ PrefabInstance:
       objectReference: {fileID: 719846539}
     - target: {fileID: 304210841242397279, guid: 89de9394ce98f1e499c5c1ef6a202b19, type: 3}
       propertyPath: destroyTime
-      value: 20
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2763095794282007136, guid: 89de9394ce98f1e499c5c1ef6a202b19, type: 3}
       propertyPath: m_Name
