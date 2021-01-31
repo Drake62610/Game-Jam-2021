@@ -36,20 +36,20 @@ public class OnOFFSwitch : MonoBehaviour
             {
                 GUI.Box(new Rect(0, 0, 200, 25), "Press 'E' to open keypad");
  
-                if(Input.GetKeyDown(KeyCode.E))
+                if(Input.GetButtonDown("Fire1"))
                 {
                     onTrigger = false;
                     isOn = !isOn;
 
                     if (isOn) {
                         _renderer.material.color = Color.green;
+                        transform.Translate(new Vector3(0, -0.1f, 0));
                     } else {
                         _renderer.material.color = Color.red;
+                        transform.Translate(new Vector3(0, 0.1f, 0));
                     }
 
                 }
-
-                Debug.Log(isOn);
             }
         }
     }
