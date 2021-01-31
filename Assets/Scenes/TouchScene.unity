@@ -2665,6 +2665,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingameHUD: {fileID: 1480141197}
   pauseMenuUI: {fileID: 232415321}
+  endgameUI: {fileID: 0}
+  _camera: {fileID: 1789850409}
 --- !u!114 &719846541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5806,6 +5808,11 @@ Transform:
 --- !u!1 &1735505860 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2763095794282007136, guid: 89de9394ce98f1e499c5c1ef6a202b19, type: 3}
+  m_PrefabInstance: {fileID: 338347084}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &1789850409 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2763095794303010481, guid: 89de9394ce98f1e499c5c1ef6a202b19, type: 3}
   m_PrefabInstance: {fileID: 338347084}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1792069107
