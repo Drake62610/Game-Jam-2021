@@ -931,7 +931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2763095794282007163, guid: 89de9394ce98f1e499c5c1ef6a202b19, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 366.02
+      value: 439.7
       objectReference: {fileID: 0}
     - target: {fileID: 2763095794282007163, guid: 89de9394ce98f1e499c5c1ef6a202b19, type: 3}
       propertyPath: m_LocalPosition.y
@@ -939,7 +939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2763095794282007163, guid: 89de9394ce98f1e499c5c1ef6a202b19, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 317.778
+      value: 354.9
       objectReference: {fileID: 0}
     - target: {fileID: 2763095794282007163, guid: 89de9394ce98f1e499c5c1ef6a202b19, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6011,7 +6011,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &812894748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6057,7 +6057,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingameHUD: {fileID: 679289697}
   pauseMenuUI: {fileID: 15337119}
-  endgameUI: {fileID: 1505854278}
   _camera: {fileID: 341755594}
 --- !u!114 &812894751
 MonoBehaviour:
