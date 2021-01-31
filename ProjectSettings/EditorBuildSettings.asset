@@ -14,8 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SmellScene.unity
     guid: ee930e8f1004bb049942316ec34cd38e
-  - enabled: 1
-    path: Assets/Scenes/VoiceScene.unity
+  - enabled: 0
+    path: Assets/Scenes/TestSceneRadar.unity
     guid: ead2cd0913ab5da408aed02581ae3675
   - enabled: 1
     path: Assets/Scenes/SightScene.unity
