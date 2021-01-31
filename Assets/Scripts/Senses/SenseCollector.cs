@@ -13,6 +13,7 @@ public class SenseCollector : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+        senseManager = gameManager.GetComponent<SenseManager>();
     }
 
     // Update is called once per frame
