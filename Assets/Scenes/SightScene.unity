@@ -5675,6 +5675,14 @@ PrefabInstance:
       propertyPath: keypadScript
       value: 
       objectReference: {fileID: 41443332}
+    - target: {fileID: 6204437289156655613, guid: 28eb3b6d4a56ff24cbfbe640c1e335d1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a9457cae10264944a5c129f4ad2b6f1, type: 2}
+    - target: {fileID: 6204437289455071743, guid: 28eb3b6d4a56ff24cbfbe640c1e335d1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6a9457cae10264944a5c129f4ad2b6f1, type: 2}
     - target: {fileID: 6204437289799333453, guid: 28eb3b6d4a56ff24cbfbe640c1e335d1, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1
