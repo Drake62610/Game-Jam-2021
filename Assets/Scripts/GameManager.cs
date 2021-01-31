@@ -46,6 +46,23 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(currentLevelId);   
     }
 
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene(0);
+        currentLevelId = 0;
+    }
+
+    public void QuitGame()
+    {
+#if UNITY_EDITOR
+        // Application.Quit() does not work in the editor so
+        // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+         Application.Quit();
+#endif
+    }
+
     void OnEnable()
     {
         //Tell our 'OnLevelFinishedLoading' function to start listening for a scene change as soon as this script is enabled.

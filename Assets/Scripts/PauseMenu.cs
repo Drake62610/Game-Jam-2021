@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject ingameHUD;
     public GameObject pauseMenuUI;
     public GameObject endgameUI;
+    
     private GameObject _player;
 
     [SerializeField] Camera _camera;
