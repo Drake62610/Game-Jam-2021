@@ -773,7 +773,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 7
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -880,7 +880,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.007739505, g: 0.16981131, b: 0.0056069805, a: 1}
+      maxColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -6249,7 +6249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathName: Chocolate
-  pathColor: {r: 0.4056604, g: 0.2077777, b: 0.05931826, a: 1}
+  pathColor: {r: 0.33962262, g: 0.17123125, b: 0.043253824, a: 1}
   nodes:
   - {x: 31, y: 1, z: 44}
   - {x: 44, y: 1, z: 39}
@@ -6258,8 +6258,8 @@ MonoBehaviour:
   - {x: 44, y: 1, z: 2}
   - {x: 60, y: 1, z: 13}
   - {x: 74, y: 1, z: 4}
-  - {x: 83, y: 1, z: 13}
-  - {x: 97, y: 1, z: 5}
+  - {x: 90, y: 1, z: 13}
+  - {x: 95, y: 1, z: 3}
   nodeCount: 9
   initialized: 1
   initialName: New Path 1
@@ -7385,6 +7385,10 @@ PrefabInstance:
       value: Violet
       objectReference: {fileID: 0}
     - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -7784,16 +7788,20 @@ PrefabInstance:
       value: Mint
       objectReference: {fileID: 0}
     - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.0056069805
+      value: 0.3490566
       objectReference: {fileID: 0}
     - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.16981131
+      value: 0.3490566
       objectReference: {fileID: 0}
     - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.007739505
+      value: 0.3490566
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
@@ -8019,6 +8027,10 @@ PrefabInstance:
       propertyPath: pathName
       value: Strawberry
       objectReference: {fileID: 0}
+    - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
 --- !u!1 &595929527
@@ -8217,7 +8229,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 7
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -13132,7 +13144,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -18141,7 +18153,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 7
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -22800,7 +22812,7 @@ MonoBehaviour:
   - {x: 63, y: 1, z: 32}
   - {x: 67, y: 1, z: 46}
   - {x: 75, y: 1, z: 38}
-  - {x: 88, y: 1, z: 35}
+  - {x: 88, y: 1, z: 36}
   nodeCount: 5
   initialized: 1
   initialName: New Path 1
@@ -23834,7 +23846,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 7
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -28589,7 +28601,7 @@ MonoBehaviour:
   - {x: 83, y: 1, z: 52}
   - {x: 48, y: 1, z: 53}
   - {x: 41, y: 1, z: 65}
-  - {x: 33, y: 1, z: 54}
+  - {x: 34, y: 1, z: 51}
   nodeCount: 6
   initialized: 1
   initialName: New Path 1
@@ -28602,7 +28614,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861118057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 74.9, y: 0, z: 21.3}
+  m_LocalPosition: {x: 74.9, y: 0, z: 22.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1676593155}
@@ -28902,6 +28914,10 @@ PrefabInstance:
     - target: {fileID: 6539670204099794616, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
       propertyPath: pathName
       value: Banana
+      objectReference: {fileID: 0}
+    - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
@@ -29215,7 +29231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6539670202469529952, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.5
+      value: 12.4
       objectReference: {fileID: 0}
     - target: {fileID: 6539670202469529952, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
       propertyPath: m_LocalPosition.y
@@ -29223,7 +29239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6539670202469529952, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 42
+      value: 14.6
       objectReference: {fileID: 0}
     - target: {fileID: 6539670202469529952, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
       propertyPath: m_LocalRotation.w
@@ -29304,6 +29320,10 @@ PrefabInstance:
     - target: {fileID: 6539670204099794616, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
       propertyPath: pathName
       value: Sea
+      objectReference: {fileID: 0}
+    - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
@@ -29515,7 +29535,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 7
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -34480,6 +34500,10 @@ PrefabInstance:
       value: Rose
       objectReference: {fileID: 0}
     - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.6856333
       objectReference: {fileID: 0}
@@ -34691,7 +34715,7 @@ MonoBehaviour:
   - {x: 48, y: 1, z: 65}
   - {x: 87, y: 1, z: 64}
   - {x: 95, y: 1, z: 89}
-  - {x: 75, y: 1, z: 97}
+  - {x: 71, y: 1, z: 95}
   nodeCount: 4
   initialized: 1
   initialName: New Path 1
@@ -35508,7 +35532,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 7
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -40327,7 +40351,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 7
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -45273,6 +45297,10 @@ PrefabInstance:
       value: Orange
       objectReference: {fileID: 0}
     - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.042452812
       objectReference: {fileID: 0}
@@ -45562,7 +45590,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1869814799, guid: 89de9394ce98f1e499c5c1ef6a202b19, type: 3}
       propertyPath: endText
-      value: You found the Voice Sense.
+      value: You found the Hearing Sense.
       objectReference: {fileID: 0}
     - target: {fileID: 283128008898414863, guid: 89de9394ce98f1e499c5c1ef6a202b19, type: 3}
       propertyPath: _waveInterval
@@ -45576,9 +45604,17 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 304210841242397279, guid: 89de9394ce98f1e499c5c1ef6a202b19, type: 3}
+      propertyPath: destroyTime
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 2763095794282007136, guid: 89de9394ce98f1e499c5c1ef6a202b19, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2763095794282007162, guid: 89de9394ce98f1e499c5c1ef6a202b19, type: 3}
+      propertyPath: speed
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2763095794282007163, guid: 89de9394ce98f1e499c5c1ef6a202b19, type: 3}
       propertyPath: m_RootOrder
@@ -46522,6 +46558,10 @@ PrefabInstance:
       value: Chocolate
       objectReference: {fileID: 0}
     - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.20287469
       objectReference: {fileID: 0}
@@ -47137,13 +47177,17 @@ MonoBehaviour:
   pathName: Sea
   pathColor: {r: 0, g: 0.10661459, b: 1, a: 1}
   nodes:
-  - {x: 24, y: 1, z: 42}
-  - {x: 23, y: 1, z: 62}
-  - {x: 13, y: 1, z: 64}
-  - {x: 19, y: 1, z: 86}
-  - {x: 36, y: 1, z: 81}
-  - {x: 23, y: 0, z: 75}
-  nodeCount: 6
+  - {x: 13, y: 1, z: 15}
+  - {x: 6, y: 1, z: 30}
+  - {x: 5, y: 1, z: 46}
+  - {x: 14, y: 1, z: 47}
+  - {x: 21, y: 1, z: 36}
+  - {x: 26, y: 1, z: 54}
+  - {x: 12, y: 1, z: 75}
+  - {x: 32, y: 1, z: 89}
+  - {x: 34, y: 1, z: 76}
+  - {x: 22, y: 1, z: 74}
+  nodeCount: 10
   initialized: 1
   initialName: New Path 1
   pathVisible: 1
@@ -47155,7 +47199,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1610985870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.5, y: 0, z: 42}
+  m_LocalPosition: {x: 12.4, y: 0, z: 14.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1300577916}
@@ -47453,7 +47497,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 7
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -52272,7 +52316,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 7
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -57106,7 +57150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6539670202469529952, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.3
+      value: 22.23
       objectReference: {fileID: 0}
     - target: {fileID: 6539670202469529952, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
       propertyPath: m_LocalRotation.w
@@ -57223,6 +57267,10 @@ PrefabInstance:
     - target: {fileID: 6539670204099794616, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
       propertyPath: pathName
       value: Grass
+      objectReference: {fileID: 0}
+    - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
@@ -57782,6 +57830,10 @@ PrefabInstance:
       value: Orb
       objectReference: {fileID: 0}
     - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6539670204099794618, guid: f8ebb292194a4ab46afd52eac3513dce, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -58161,7 +58213,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6009561437064510306, guid: ed6c226afc624a44381e91c17c882968, type: 3}
       propertyPath: m_Name
-      value: Sense Orb
+      value: Hearing Orb
       objectReference: {fileID: 0}
     - target: {fileID: 6009561437064510306, guid: ed6c226afc624a44381e91c17c882968, type: 3}
       propertyPath: m_IsActive
@@ -58546,7 +58598,7 @@ MonoBehaviour:
   - {x: 34, y: 1, z: 93}
   - {x: 8, y: 1, z: 97}
   - {x: 3, y: 1, z: 57}
-  - {x: 14, y: 1, z: 52}
+  - {x: 18, y: 1, z: 55}
   nodeCount: 4
   initialized: 1
   initialName: New Path 1
